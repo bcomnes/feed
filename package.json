@@ -1,7 +1,7 @@
 {
-  "name": "log",
+  "name": "feed",
   "version": "1.0.0",
-  "description": "log",
+  "description": "feed",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js | tap-spec && standard | snazzy",
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PDXNode/site.git"
+    "url": "git+https://github.com/bcomnes/feed.git"
   },
   "keywords": [],
   "author": "Bret Comnes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PDXNode/site/issues"
+    "url": "https://github.com/bcomnes/feed/issues"
   },
-  "homepage": "https://github.com/PDXNode/site#readme",
+  "homepage": "https://github.com/bcomnes/feed#readme",
   "devDependencies": {
     "browserify": "^13.0.1",
     "budo": "^8.2.2",
