@@ -8,17 +8,10 @@
 /* Global Styles */
 
 html {
-  color: #ABABAB;
-  background-color: #292929;
+  color: #aec2e0;
+  background-color: #14191f;
   -webkit-font-smoothing: antialiased;
 }
-
-a { -webkit-transition: background-color 200ms, color 200ms; transition: background-color 200ms, color 200ms; }
-a:link { color: #FF001F; } /* unvisited links */
-a:visited { color: #fff } /* visited links */
-a:hover { background-color: #FF001F; color: #000; } /* user hovers */
-a:hover:visited { background-color: #fff; }
-a:active { color: hsla(352, 64%, 48%, 1) } /* active links */
 
 body {
   margin: 0px;
@@ -32,13 +25,12 @@ body {
     "Bitstream Vera Sans Mono",
     "Courier New",
     monospace,
-    serif
+    serif;
 }
 
 body > header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
+  /* position: sticky;
+  top: 0px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,34 +38,59 @@ body > header {
       -ms-flex-align: center;
           align-items: center;
   text-transform: lowercase;
-  color: #fff;
   margin-bottom: 0.5em;
   juisify-content: space-between;
 }
 
 body > header a { -webkit-transition: background-color 200ms, color 200ms; transition: background-color 200ms, color 200ms; }
-body > header a:link { color: #fff; background-color: #FF001F; } /* unvisited links */
-body > header a:visited { color: #fff } /* visited links */
-body > header a:hover { color: #FF001F; background-color: inherit; } /* user hovers */
+body > header a:link { color: #FF001F; background-color: #000; text-decoration: none; } /* unvisited links */
+body > header a:visited { color: #FF001F } /* visited links */
+body > header a:hover { color: #324357; background-color: inherit; } /* user hovers */
 body > header a:active { color: hsla(352, 64%, 48%, 1) } /* active links */
 
-body > header h1 { margin: 0; -ms-flex-negative: 0; flex-shrink: 0; }
+body > header h1 { margin: 0; font-size: 1.5em}
 
 main {
   margin: 1.2em 1.2em;
+  word-wrap: break-word;
 }
+
+main a { -webkit-transition: background-color 200ms, color 200ms; transition: background-color 200ms, color 200ms; }
+main a:link { color: #267fb5; text-decoration: none; } /* unvisited links */
+main a:visited { color: #267fb5 } /* visited links */
+main a:hover { background-color: #FF001F; color: #000;  } /* user hovers */
+main a:hover:visited { background-color: #aec2e0; }
+main a:active { color: hsla(352, 64%, 48%, 1) } /* active links */
 
 article {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+  max-width: 50em;
 }
 
 article > header {
   margin-bottom: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article h2,h3,h4,h5,h6 {
+  text-transform: uppercase;
 }
 
 article > header h1 {
+  color: #000;
+  font-size: 3em;
+  background-color: #FF001F;
   margin: 0;
   font-family: "Helvetica Neue",
     Helvetica,
@@ -81,12 +98,18 @@ article > header h1 {
     "Lucida Grande",
     sans-serif;
   font-weight: bold;
-  color: #fff
 }
 
 article > header time {
   font-size: 0.8em;
-  color: #ABABAB;
+  color: #324357;
+  background-color: #000;
+}
+
+article img {
+  max-width: 90%;
+  display: block;
+  margin: 50px auto;
 }
 
 footer {
@@ -94,3 +117,4 @@ footer {
   /* bottom: 0px; */
   text-transform: lowercase;
 }
+
