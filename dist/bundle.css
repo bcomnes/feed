@@ -8,8 +8,8 @@
 /* Global Styles */
 
 html {
-  color: #aec2e0;
-  background-color: #14191f;
+  color: hsla(216, 44%, 78%, 1.0);
+  background-color: hsla(212, 21%, 10%, 1.0);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,45 +28,68 @@ body {
     serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
+ul li:before {
+  content: "-";
+  position: absolute;
+  margin-left: -1.1em;
+}
+
+a { -webkit-transition: background-color 200ms, color 200ms; transition: background-color 200ms, color 200ms; text-decoration: none; }
+a:link { color: hsla(202, 65%, 42%, 1.0); background-color: hsla(0, 0%, 0%, 1.0); } /* unvisited links */
+a:visited { color: hsla(202, 65%, 42%, 1.0); } /* visited links */
+a:hover { color: hsla(0, 0%, 0%, 1.0); background-color: hsla(352, 100%, 50%, 1.0); } /* user hovers */
+a:visited:hover { color: hsla(0, 0%, 100%, 1.0); background-color: hsla(0, 0%, 0%, 1.0); }
+a:active { color: hsla(352, 100%, 50%, 1.0); background-color: transparent; } /* active links */
+
 body > header {
-  /* position: sticky;
-  top: 0px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-transform: lowercase;
+}
+
+body > header h1 { margin: 0; font-weight: bold; }
+body > header h1 a { text-decoration: none; }
+body > header h1 a:link { background-color: #144212; color: #A6E22E;}
+body > header h1 a:visited { background-color: #144212; color: #A6E22E;}
+
+body > header nav {
+  margin: 0;
+  font-weight: bold;
+  background-color: #660000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-transform: lowercase;
-  margin-bottom: 0.5em;
-  juisify-content: space-between;
-}
-
-body > header a { -webkit-transition: background-color 200ms, color 200ms; transition: background-color 200ms, color 200ms; }
-body > header a:link { color: #FF001F; background-color: #000; text-decoration: none; } /* unvisited links */
-body > header a:visited { color: #FF001F } /* visited links */
-body > header a:hover { color: #324357; background-color: inherit; } /* user hovers */
-body > header a:active { color: hsla(352, 64%, 48%, 1) } /* active links */
-
-body > header h1 { margin: 0; font-size: 1.5em}
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; max-width: 30em; }
+body > header nav a { text-decoration: none; }
+body > header nav a:link {  color: #F92672;}
+body > header nav a:visited { color: #F92672;}
 
 main {
   margin: 1.2em 1.2em;
   word-wrap: break-word;
 }
 
-main a { -webkit-transition: background-color 200ms, color 200ms; transition: background-color 200ms, color 200ms; }
-main a:link { color: #267fb5; text-decoration: none; } /* unvisited links */
-main a:visited { color: #267fb5 } /* visited links */
-main a:hover { background-color: #FF001F; color: #000;  } /* user hovers */
-main a:hover:visited { background-color: #aec2e0; }
-main a:active { color: hsla(352, 64%, 48%, 1) } /* active links */
-
 article {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
   max-width: 50em;
+  border-bottom: 1px dotted #3B3A32;
 }
 
 article > header {
@@ -88,9 +111,9 @@ article h2,h3,h4,h5,h6 {
 }
 
 article > header h1 {
-  color: #000;
+  color: hsla(0, 0%, 0%, 1.0);
   font-size: 3em;
-  background-color: #FF001F;
+  background-color: hsla(352, 100%, 50%, 1.0);
   margin: 0;
   font-family: "Helvetica Neue",
     Helvetica,
@@ -100,10 +123,10 @@ article > header h1 {
   font-weight: bold;
 }
 
-article > header time {
+article time {
   font-size: 0.8em;
-  color: #324357;
-  background-color: #000;
+  color: hsla(212, 27%, 26%, 1.0);
+  background-color: hsla(0, 0%, 0%, 1.0);
 }
 
 article img {
@@ -112,9 +135,38 @@ article img {
   margin: 50px auto;
 }
 
+article.txt {
+  margin-top: 5em;
+  padding-bottom: 5em;
+}
+
+article.txt p {
+  color: hsla(0, 0%, 0%, 1.0);
+  font-size: 2em;
+  background-color: hsla(352, 100%, 50%, 1.0);
+  margin: 0.5em 0;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+article.txt footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+
 footer {
   /* position: sticky; */
   /* bottom: 0px; */
   text-transform: lowercase;
 }
 
+@media only screen and (min-device-height: 480px) {
+    body { max-width: 100%; }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {}
